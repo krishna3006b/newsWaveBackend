@@ -72,6 +72,6 @@ app.get("/api/ipfs/gateway/:cid", async (req, res) => {
   }
 });
 
-app.listen(3001, () => console.log("IPFS API running on port 3001"));
+app.listen(3010, () => console.log("IPFS API running on port 3010"));
 
 module.exports = { uploadToIPFS, getFromIPFS, getGatewayUrl };
