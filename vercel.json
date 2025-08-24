@@ -19,8 +19,5 @@
       "src": "/api/ipfs/gateway/(.*)",
       "dest": "/api/ipfs/gateway.js"
     }
-  ],
-  "env": {
-    "THIRDWEB_SECRET_KEY": "@thirdweb_secret_key"
-  }
+  ]
 }

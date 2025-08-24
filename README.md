@@ -54,9 +54,25 @@ Get gateway URL for IPFS content.
 
 ## Environment Variables
 
-Set the following environment variable in your Vercel project:
+### Local Development
+Create a `.env` file in your project root:
+```
+THIRDWEB_SECRET_KEY=your_secret_key_here
+```
 
-- `THIRDWEB_SECRET_KEY`: Your Thirdweb secret key
+### Vercel Deployment
+Set environment variables in your Vercel project dashboard:
+
+1. Go to your Vercel project dashboard
+2. Navigate to **Settings** → **Environment Variables**
+3. Add a new environment variable:
+   - **Name**: `THIRDWEB_SECRET_KEY`
+   - **Value**: Your Thirdweb secret key
+   - **Environment**: Select all environments (Production, Preview, Development)
+4. Click **Save**
+5. Redeploy your project
+
+**Important**: Never commit your `.env` file to version control. The `.gitignore` file already excludes it.
 
 ## Local Development
 
@@ -87,9 +103,7 @@ Set the following environment variable in your Vercel project:
    npm run deploy
    ```
 
-3. Set environment variables in your Vercel dashboard:
-   - Go to your project settings
-   - Add `THIRDWEB_SECRET_KEY` with your Thirdweb secret key
+3. Set environment variables in your Vercel dashboard (see Environment Variables section above)
 
 ## Project Structure
 
@@ -110,3 +124,4 @@ Set the following environment variable in your Vercel project:
 - Each endpoint is now a separate file in the `api/ipfs/` directory
 - CORS is enabled for all endpoints
 - The API is optimized for serverless execution on Vercel
+- Environment variables are set directly in Vercel dashboard, not in vercel.json
