@@ -1,8 +1,27 @@
 {
+  "name": "newswave-backend",
+  "version": "1.0.0",
+  "description": "NewsWave Backend - IPFS storage API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
+  },
   "dependencies": {
     "@thirdweb-dev/storage": "^2.0.15",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2"
-  }
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["ipfs", "news", "api", "vercel"],
+  "author": "",
+  "license": "MIT"
 }
